@@ -1,0 +1,5 @@
+Gemfile
+db/**
+tmp/**
+log/**
+public/images/**
