@@ -1,0 +1,71 @@
+!!!
+%html(lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" class="mode-default")
+  %head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#")
+    %meta(charset="utf-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %meta(name="description" content="Super awesome captured! Post the image captured by KozytyGyazo.")
+    %meta(property="og:description" content="Super awesome captured! Post the image captured by KozytyGyazo.")
+    %meta(name="copyright" content="&copy; Kozyty")
+    %meta(property="fb:app_id" content="")
+    %meta(property="og:type" content="website")
+    %meta(property="og:image" content=@image_url)
+    %meta(property="og:site_name" content="KozytyGyazo")
+    %meta(property="og:url" content=@url)
+    %link(rel="canonical" href=@url)
+    %meta(property="og:title" content="KozytyのGyazo")
+    %title KozytyのGyazo
+    %link(href="/css/bootstrap.css" rel="stylesheet")
+    :css
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    %link(href="/css/bootstrap-responsive.css" rel="stylesheet")
+    /[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]
+    %link(rel="apple-touch-icon-precomposed" sizes="144x144" href="")
+    %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="")
+    %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="")
+    %link(rel="apple-touch-icon-precomposed" href="")
+    %link(rel="shortcut icon" href="")
+  %body
+    %a(href="https://github.com/kozyty/gyazo-sinatra")
+      %img(style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub")
+    .container-narrow
+      .masthead
+        %h3.muted KozytyGyazo
+      %hr
+      %ul
+        %li
+          %a(href=@image_url)
+            %img(src=@image_url)
