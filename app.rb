@@ -13,6 +13,10 @@ module Gyazo
       set :image_url, "http://gyazo.kozyty.com/images/"
     end
 
+    get '/' do
+      haml :index
+    end
+
     post '/' do
       id   = request[:id]
       data = request[:imagedata][:tempfile].read
@@ -25,6 +29,10 @@ module Gyazo
       File.open("#{image_dir}/#{hash}.png", 'w'){|f| f.write(data)}
 
       "#{image_url}/#{hash}.png"
+    end
+
+    get '/*' do
+      haml :image
     end
 
   end

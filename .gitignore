@@ -1,5 +1,5 @@
-Gemfile
 db/**
 tmp/**
 log/**
 public/images/**
+unicorn.conf.rb
