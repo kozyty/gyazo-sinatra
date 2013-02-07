@@ -12,13 +12,14 @@
     %meta(property="og:site_name" content="KozytyGyazo")
     %meta(property="og:url" content=@url)
     %link(rel="canonical" href=@url)
-    %meta(property="og:title" content="KozytyのGyazo")
-    %title KozytyのGyazo
+    %meta(property="og:title" content="KozytyGyazo")
+    %title KozytyGyazo
     %link(href="/css/bootstrap.css" rel="stylesheet")
     :css
       body {
         padding-top: 20px;
         padding-bottom: 40px;
+        background-image: url("../../../../img/texturetastic_gray_2X.png");
       }
 
       /* Custom container */
@@ -65,7 +66,7 @@
       .masthead
         %h3.muted KozytyGyazo
       %hr
-      %ul
+      %ul.thumbnails
         %li
-          %a(href=@image_url)
-            %img(src=@image_url)
+          %a.thumbnail(href=@image_url)
+            %img(src=@image_url);
